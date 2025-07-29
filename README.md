@@ -20,5 +20,5 @@ python CorrosivePoison_Tox.py
 
 ```
 
-## 📊 Dataset Source
+## Dataset Source
 The dataset was adapted from *[Review of Forensic Medicine and Toxicology by Gautam Biswas]*
