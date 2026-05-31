@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+:root {
+  --background: #111125;
+  --surface: #1e1e32;
+  --surface-bright: #37374d;
+  --surface-container: #1e1e32;
+  --surface-container-high: #28283d;
+  --surface-container-highest: #333348;
+  --surface-container-low: #1a1a2e;
+  --surface-container-lowest: #0c0c1f;
+  --primary: #ffb4a5;
+  --primary-container: #ff5637;
+  --on-primary: #650b00;
+  --on-primary-container: #590800;
+  --secondary: #a9c8fc;
+  --secondary-container: #294a77;
+  --on-secondary: #09305c;
+  --on-secondary-container: #9bbaee;
+  --tertiary: #7cd0ff;
+  --tertiary-container: #129bd0;
+  --on-tertiary: #00344a;
+  --error: #ffb4ab;
+  --error-container: #93000a;
+  --on-error: #690005;
+  --on-error-container: #ffdad6;
+  --on-background: #e2e0fc;
+  --on-surface: #e2e0fc;
+  --on-surface-variant: #e5bdb6;
+  --outline: #ac8881;
+  --outline-variant: #5c403a;
+  --foreground: #e2e0fc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-secondary: var(--secondary);
+  --color-error: var(--error);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(ellipse at top left, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #e2e0fc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.primary-gradient {
+  background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+}
+
+.primary-glow {
+  box-shadow: 0 4px 20px rgba(255, 75, 43, 0.4);
+}
+
+.primary-glow:hover {
+  box-shadow: 0 6px 30px rgba(255, 75, 43, 0.6);
+  transform: translateY(-2px);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 75, 43, 0.4);
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  color: #e2e0fc;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+  border-color: #ff4b2b;
+  box-shadow: 0 0 0 3px rgba(255, 75, 43, 0.15);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
